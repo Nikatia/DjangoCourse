@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import landingview, productlistview, supplierlistview, \
+from .views import landingview, loginview, login_action, logout_action, \
+                   productlistview, supplierlistview, \
                    addsupplier, addproduct, \
                    deleteproduct, confirmdeleteproduct, \
                    deletesupplier, confirmdeletesupplier, \
@@ -25,7 +26,13 @@ from .views import landingview, productlistview, supplierlistview, \
                    searchsuppliers, searchproducts, search_suppliers_products
 
 urlpatterns = [
-    path('', landingview),
+    #Login
+    path('', loginview),
+    path('login/', login_action),
+    path('logout', logout_action),
+
+    #Landing page after login
+    #path('landing/', landingview),
 
     #Suppliers:
     path('suppliers/', supplierlistview),

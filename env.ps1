@@ -1,0 +1,5 @@
+$Env:DBHOST = "localhost"
+$Env:DBUSER = "manager"
+$Env:DBNAME = "suppliersdb"
+$Env:DBPASS = "supersecretpass"
+$Env:SECRET_KEY = "73823402bf981831db25d569396f12cddec8c11b6e1dd3a51c3be471810e6a70"
